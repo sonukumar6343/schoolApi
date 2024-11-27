@@ -1,8 +1,13 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
-const sequelize = new Sequelize('assignment', 'root', 'hustler6343', {
-  host: 'localhost',
+const sequelize = new Sequelize('defaultdb', 'avnadmin', 'AVNS_3kHaXgyvtomuCPxjblN', {
+  host: 'mysql-2792a6b2-hustler6343.e.aivencloud.com',
   dialect: 'mysql',
+  port: 11357,
+  ssl: {
+    require: true,
+    rejectUnauthorized: 
+  },
 });
 
 const School = sequelize.define('School', {
