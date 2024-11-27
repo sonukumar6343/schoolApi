@@ -1,12 +1,13 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
+// Connect to the online MySQL database
 const sequelize = new Sequelize('defaultdb', 'avnadmin', 'AVNS_3kHaXgyvtomuCPxjblN', {
   host: 'mysql-2792a6b2-hustler6343.e.aivencloud.com',
   dialect: 'mysql',
   port: 11357,
   ssl: {
     require: true,
-    rejectUnauthorized: 
+    rejectUnauthorized: false,  // May be necessary for SSL connection
   },
 });
 
